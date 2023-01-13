@@ -14,8 +14,6 @@ This repository contains PyTorch implementation code for the paper "Minsight: a 
 
 ## Requirements
 
-PyTorch >= 1.9.0
-
 `pip install -r requirements.txt`
 
 ## Usage
