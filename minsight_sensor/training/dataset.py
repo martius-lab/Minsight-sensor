@@ -26,12 +26,7 @@ def resize(img, scale):
 class ForceDataset(Dataset):
 
     def __init__(self, root_dir, indices, params):
-        """
-        Args:
-            root_dir (string): Directory with all the images.
-            transform (callable, optional): Optional transform to be applied
-                on a sample.
-        """
+
         self.root_dir = root_dir
         self.image_dir = root_dir + "PostData/"
         self.map_dir = root_dir + params.map_dir
@@ -94,7 +89,6 @@ def ForceDataloaders(params, num_workers=4):
     train_index = np.load(os.path.join(params.data_path,"01_train_index.npy"))
     test_index = np.load(os.path.join(params.data_path,"01_test_index.npy"))
     val_index = np.load(os.path.join(params.data_path,"01_valid_index.npy"))
-
   
     print("Train Set: : %i, Test Set: %i, Validation Set: %i" %(len(train_index), len(test_index), len(val_index)))
 
@@ -136,10 +130,12 @@ class Postprocessor():
             self.min_ = np.hstack((min_[12:15], min_[6:9]))
             self.scale = torch.from_numpy(1.0/1024.0*(self.max_-self.min_)).float()
             self.const = torch.from_numpy(self.min_).float()
+
         if use_gpu:
             self.scale = self.scale.cuda()
             self.const = self.const.cuda()
             self.X3 = self.X3.cuda()
+            self.indentation_info = self.indentation_info.cuda()
             
     def undo_rescale(self, output):
         if self.rescale:
@@ -212,10 +208,6 @@ class Postprocessor():
             (0.528, 0.471, 0.701), (0.772, 0.432, 0.102),
             (0.364, 0.619, 0.782), (0.572, 0.586, 0.) ]  # the last one is a darker green
 
-        def darker(color,factor=0.87):
-            r,g,b = color
-            return (r*factor,g*factor,b*factor)
-
         map = map.cpu().detach().numpy()
 
         if self.flat_output == True: 
@@ -248,58 +240,6 @@ class Postprocessor():
         ax.view_init(35,-105)
         plt.subplots_adjust(0.08,0.08,0.99,0.99)
         fig.savefig("output.png",format="png")
-        buf = io.BytesIO()
-        fig.savefig(buf, format="png", dpi=180)
-        buf.seek(0)
-        return Image.open(buf)
-
-
-    def force_vec_vis(self, force):
-
-        grey_skel = (0.8,0.8,0.99)
-        grey_surf = (0.6,0.6,0.6,0.5)
-        arrowscale=0.10
-        fs = 28
-
-        font = FontProperties()
-        font.set_family('serif')
-        font.set_name('Times New Roman')
-        font.set_style('italic')
-        font.set_size(fs)
-        plt.close()
-        fig = plt.figure(figsize=(12.32,12.32))
-
-        colors__ = [(0.368, 0.507, 0.71), (0.881, 0.611, 0.142),
-            (0.56, 0.692, 0.195), (0.923, 0.386, 0.209),
-            (0.528, 0.471, 0.701), (0.772, 0.432, 0.102),
-            (0.364, 0.619, 0.782), (0.572, 0.586, 0.) ]
-
-        def darker(color,factor=0.87):
-            r,g,b = color
-            return (r*factor,g*factor,b*factor)
-            
-        if torch.is_tensor(force):
-            force = force.cpu().detach().numpy()
-        
-        #3D plot
-        # ax4 = fig.add_subplot(111, projection='3d')
-        # #ax4.scatter(self.skeleton_surface[:,1],self.skeleton_surface[:,2],self.skeleton_surface[:,3],s=1,color=grey_skel,alpha=0.8)
-        # ax4.scatter(self.skeleton_surface[:,1],self.skeleton_surface[:,2],self.skeleton_surface[:,3],s=1,color=grey_skel,alpha=0.8)
-        # ax4.scatter(self.indentation_info[:,1],self.indentation_info[:,2],self.indentation_info[:,3],s=1,color=grey_surf)
-        # ax4.quiver(force[0],force[1],force[2],force[3]*10.0,force[4]*10.0,force[5]*10.0, color=colors__[3])
-
-        #2D plot
-        ax4 = fig.add_subplot(111)
-        ax4.scatter(self.skeleton_surface[:,1],self.skeleton_surface[:,2],s=1,color=grey_skel,alpha=0.8)
-        ax4.scatter(self.indentation_info[:,1],self.indentation_info[:,2],s=1,color=grey_surf)
-        ax4.quiver(force[0],force[1],force[3]*10.0,force[4]*10.0,color=colors__[3])
-        
-        plt.xlim([-25,25])
-        plt.xlabel("X")
-        plt.ylim([-25,25])
-        plt.ylabel("Y")
-
-        plt.subplots_adjust(0.08,0.08,0.99,0.99)
         buf = io.BytesIO()
         fig.savefig(buf, format="png", dpi=180)
         buf.seek(0)

@@ -19,7 +19,7 @@ if __name__ == '__main__':
     parser.add_argument('--model_path', default="../trained_model.pt")
     args = parser.parse_args()
 
-    config = read_json("config_local.json")
+    config = read_json("../config.json")
     params = LocalParams(config)
 
     # use gpu or not
@@ -47,14 +47,14 @@ if __name__ == '__main__':
 
     if args.training==True:
         model, optimizer_ft, lr_scheduler = train_model(params=params,
-                                                                        model=model,
-                                                                        criterion=criterion,
-                                                                        optimizer=optimizer_ft,
-                                                                        scheduler=lr_scheduler,
-                                                                        dataloaders=dataloaders,
-                                                                        dataset_sizes=dataset_sizes,
-                                                                        postprocessor=postprocessor,
-                                                                        use_gpu=use_gpu)
+                                                        model=model,
+                                                        criterion=criterion,
+                                                        optimizer=optimizer_ft,
+                                                        scheduler=lr_scheduler,
+                                                        dataloaders=dataloaders,
+                                                        dataset_sizes=dataset_sizes,
+                                                        postprocessor=postprocessor,
+                                                        use_gpu=use_gpu)
         torch.save({'model_weights': model.state_dict(),
                 'optimizer_weights': optimizer_ft.state_dict(),
                 'lr_scheduler': lr_scheduler.state_dict()}, args.model_path)
