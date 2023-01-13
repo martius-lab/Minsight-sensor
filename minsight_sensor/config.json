@@ -1,0 +1,18 @@
+{
+
+    "batch_size":1,
+    "gamma":0.98,
+    "total_epochs":32,
+    "model":"resnet",
+    "working_dir": "",
+    "data_path": "../../../Data/training_data_sensor/training_data_test/",
+    "map_dir":"MapData_flat",
+    "lr":0.001,
+    "print_freq":1000,
+    "rescale":1,
+    "seed":42,
+    "force_map":1,
+    "flat_output":1,
+    "input_scale":100
+
+}
