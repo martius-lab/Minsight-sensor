@@ -18,9 +18,9 @@ This repository contains PyTorch implementation code for the paper "Minsight: a 
 
 ## Usage
 
-Data processing for the raw data can be found in the jupyter notebook under data_processing/. \
-Code for training the mapping on the preprocessed data, can be found in training/ and run with `python main.py` \
-To reproduce error plots and inference times, refer to code in experiments/. \
+Data processing for the raw data can be found in the jupyter notebook under minsight_sensor/data_processing/. \
+Code for training the mapping on the preprocessed data, can be found in minsight_sensor/training/ and run with `python main.py` \
+To reproduce error plots and inference times, refer to the respective scripts in minsight_sensor/. \
 
 To reproduce results for the lump classification experiment, use code in lump_classification/, together with the data published in https://doi.org/10.17617/3.AEDHD1
 
