@@ -295,7 +295,6 @@ if __name__ == "__main__":
         np.save(os.path.join(result_path, "loc_accuracies.npy"),[loc_errors_total, loc_errors_3d] )
         np.save(os.path.join(result_path, "force_accuracies.npy"),[force_errors_total, force_errors_3d])
         np.save(os.path.join(result_path, "force_magnitudes.npy"),force_mag)
-
     else:
         loc_errors = np.load(os.path.join(result_path, "loc_accuracies.npy"), allow_pickle=True)
         force_errors = np.load(os.path.join(result_path, "force_accuracies.npy"), allow_pickle=True)

@@ -6,13 +6,13 @@
     "model":"resnet",
     "working_dir": "",
     "data_path": "../../../Data/training_data_sensor/training_data_test/",
-    "map_dir":"MapData_flat",
+    "map_dir":"MapData",
     "lr":0.001,
     "print_freq":1000,
     "rescale":1,
     "seed":42,
-    "force_map":1,
-    "flat_output":1,
+    "force_map":0,
+    "flat_output":0,
     "input_scale":100
 
 }
