@@ -23,6 +23,7 @@ Minsight is a vision-based tactile sensor. Is uses a camera as the transducer an
 <p align="center"><img src="Pics/InsightStructure.png" width="395" height="180.5">
   
 
+
 # Mechanical Components
 
 Our hybrid structure of a soft elastomer shell enclosing a stiff metal skeleton ensures high sensitivity and robustness. The soft elastomer is for detecting light contact with high sensitivity. The metal skeleton is for holding the elastomer’s global shape and sustaining high-impact forces.
