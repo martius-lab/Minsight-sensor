@@ -7,7 +7,7 @@ This project shows the principle desing of [Minsight](https://onlinelibrary.wile
 
 The paper is titled "[Minsight: A Fingertip-Sized Vision-Based Tactile Sensor for Robotic Manipulation](https://onlinelibrary.wiley.com/doi/full/10.1002/aisy.202300042)", published at *Advanced Intelligent Systems*, 2023. 
 
-<p align="center"><img src="Pics/HumanThumb.png" width="182.265" height="200">
+<p align="center"><img src="Images/Minsight.png" width="182.265" height="200">
   
 This work was done by Iris Andrussow, Huanbo Sun, Katherine J. Kuchenbecker, Georg Martius at the Max Planck Institute for Intelligent Systems.
   
@@ -20,7 +20,7 @@ Intelligent interaction with the physical world requires perceptual abilities be
 
 Minsight is a vision-based tactile sensor. Is uses a camera as the transducer and can detect small deformations of an elastic shell from the inside. To create 3D forces, we use the photometric stereo effect to learn and end-to-end mapping of camera image to a force map over the full sensor surface. 
   
-<p align="center"><img src="Pics/InsightStructure.png" width="395" height="180.5">
+ <p align="center"><img src="Images/Working_Principle.png" width="430.325" height="262.675">
   
 
 
@@ -28,7 +28,9 @@ Minsight is a vision-based tactile sensor. Is uses a camera as the transducer an
 
 Our hybrid structure of a soft elastomer shell enclosing a stiff metal skeleton ensures high sensitivity and robustness. The soft elastomer is for detecting light contact with high sensitivity. The metal skeleton is for holding the elastomer’s global shape and sustaining high-impact forces.
 
-  <p align="center"><img src="Pics/Mechanics.png" width="430.325" height="262.675">
+<p align="center"><img src="Images/Mechanical_Structure.png" width="395" height="180.5">
+
+ 
 
 ## Elastomer Shell
 - 3D Printer: [Formlabs Form 3](https://formlabs.com/eu/3d-printers/form-3/)
@@ -60,7 +62,7 @@ Our hybrid structure of a soft elastomer shell enclosing a stiff metal skeleton 
 ## Imaging System
 We use a LED ring and a collimator to create structured light. The structured light forms a light cone inside the enclosed volume. Each voxel inside this volume has a specific color code with 3D information. External contact moves the elastomer from one color zone to another. Together with shading effects the camera can detect 3D deformations of the surface from a single 2D image. As shown on the right figure, mimicking human fingerprint, we also add ridges to the surface to help the system recognize the directions of the surface extension.
 
-  <p align="center"><img src="Pics/Imaging.png" width="482.3" height="246.4">
+  <p align="center"><img src="Images/Imaging.png" width="482.3" height="246.4">
     
 ### Camera
 
@@ -80,7 +82,7 @@ We use a LED ring and a collimator to create structured light. The structured li
 # Calibration
 We use a custom test bed to calibrate the sensor in a controlled way, collecting both normal and shear forces.
 For the technical details of this test bed, please refer to the Testbed section [here]{https://github.com/Huanbo-Sun/Haptics-for-Robots-Insight/blob/master/README.md#testbed}
-   <p align="center"><img src="Pics/Testbed.png" width="500.5" height="246.4"> 
+   <p align="center"><img src="Images/Testbed.png" width="500.5" height="246.4"> 
 
 # Software
 Insight constantly records images from inside using a camera. Feeding these images and a reference image into a trained machine learning model makes it possible to estimate the force distribution all over a surface. Each pixel in the force prediction map has three values that indicate the force strength in three directions (x, y, and z). In a force visualization on the right, each point corresponding to each pixel in the force map shows the force distribution of the contact in both normal and shear directions.
