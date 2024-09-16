@@ -1,20 +1,20 @@
-# Insight: A Haptic Sensor Powered by Vision and Machine Learning
+# Minsight: A Fingertip-Sized Vision-Based Tactile Sensor for Robotic Manipulation
 <p align="right">
-  *This is the only official content release regarding the design of Insight.*
+  *This is the only official content release regarding the design of Minsight.*
 </p>
 
-This project shows the principle desing of [Insight](https://www.youtube.com/watch?v=lTAJwcZopAA&t=3s). It is a soft thumb-sized haptic sensor that can enbable robots feel directional force distributions all over a 3D conical surface.
+This project shows the principle desing of [Minsight](https://onlinelibrary.wiley.com/doi/full/10.1002/aisy.202300042). It is a soft fingertip-sized tactile sensor that can enbable robots feel directional force distributions all over its 3D surface.
 
-The paper is titled "[A soft thumb-sized vision-based sensor with accurate all-round force perception](https://rdcu.be/cHCl9)", published at [*Nature Machine Intelligence*, 2022](https://rdcu.be/cHCl9). 
+The paper is titled "[Minsight: A Fingertip-Sized Vision-Based Tactile Sensor for Robotic Manipulation](https://onlinelibrary.wiley.com/doi/full/10.1002/aisy.202300042)", published at *Advanced Intelligent Systems*, 2023. 
 
 <p align="center"><img src="Pics/HumanThumb.png" width="182.265" height="200">
   
-This work was done by Huanbo Sun, Katherine J. Kuchenbecker, Georg Martius at the Max Planck Institute for Intelligent Systems.
+This work was done by Iris Andrussow, Huanbo Sun, Katherine J. Kuchenbecker, Georg Martius at the Max Planck Institute for Intelligent Systems.
   
 If you make used of our work, please use the citation information [below](#Citation).
   
 # Abstract
-Vision-based haptic sensors have emerged as a promising approach to robotic touch due to affordable high-resolution cameras and successful computer vision techniques; however, their physical design and the information they provide do not yet meet the requirements of real applications. We present a robust, soft, low-cost, vision-based, thumb-sized three-dimensional haptic sensor named Insight, which continually provides a directional force-distribution map over its entire conical sensing surface. Constructed around an internal monocular camera, the sensor has only a single layer of elastomer over-moulded on a stiff frame to guarantee sensitivity, robustness and soft contact. Furthermore, Insight uniquely combines photometric stereo and structured light using a collimator to detect the three-dimensional deformation of its easily replaceable flexible outer shell. The force information is inferred by a deep neural network that maps images to the spatial distribution of three-dimensional contact force (normal and shear). Insight has an overall spatial resolution of 0.4 mm, a force magnitude accuracy of around 0.03 N and a force direction accuracy of around five degrees over a range of 0.03–2 N for numerous distinct contacts with varying contact area. The presented hardware and software design concepts can be transferred to a wide variety of robot parts.
+Intelligent interaction with the physical world requires perceptual abilities beyond vision and hearing; vibrant tactile sensing is essential for autonomous robots to dexterously manipulate unfamiliar objects or safely contact humans. Therefore, robotic manipulators need high-resolution touch sensors that are compact, robust, inexpensive, and efficient. The soft vision-based haptic sensor presented herein is a miniaturized and optimized version of the previously published sensor Insight. Minsight has the size and shape of a human fingertip and uses machine learning methods to output high-resolution maps of 3D contact force vectors at 60 Hz. Experiments confirm its excellent sensing performance, with a mean absolute force error of 0.07 N and contact location error of 0.6 mm across its surface area. Minsight's utility is shown in two robotic tasks on a 3-DoF manipulator. First, closed-loop force control enables the robot to track the movements of a human finger based only on tactile data. Second, the informative value of the sensor output is shown by detecting whether a hard lump is embedded within a soft elastomer with an accuracy of 98\%. These findings indicate that Minsight can give robots the detailed fingertip touch sensing needed for dexterous manipulation and physical human–robot interaction.
 
 # Working Mechanism
 ## Hardware Design
@@ -122,38 +122,36 @@ We design a test bed to stimulate the sensor in a controlled way, with both norm
 Please use the following citation if you make use of our work:
 ## BibTex
 ``` citation
-@article{Insight,
-  title = {A soft thumb-sized vision-based sensor with accurate all-round force perception},
-  author = {Sun, Huanbo and Kuchenbecker, Katherine J. and Martius, Georg},
-  journal = {Nature Machine Intelligence},
-  volume = {4},
-  organization = {Max Planck Institute for Intelligent Systems},
-  month = feb,
-  year = {2022},
-  doi = {10.1038/s42256-021-00439-3},
-  url = {https://rdcu.be/cHCl9},
-  month_numeric = {2}
-  } 
+@article{https://doi.org/10.1002/aisy.202300042,
+author = {Andrussow, Iris and Sun, Huanbo and Kuchenbecker, Katherine J. and Martius, Georg},
+title = {Minsight: A Fingertip-Sized Vision-Based Tactile Sensor for Robotic Manipulation},
+journal = {Advanced Intelligent Systems},
+volume = {5},
+number = {8},
+pages = {2300042},
+doi = {https://doi.org/10.1002/aisy.202300042},
+url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/aisy.202300042},
+year = {2023}
+}
 ```
 ### RIS
-``` citation
 TY  - JOUR
+T1  - Minsight: A Fingertip-Sized Vision-Based Tactile Sensor for Robotic Manipulation
+AU  - Andrussow, Iris
 AU  - Sun, Huanbo
 AU  - Kuchenbecker, Katherine J.
 AU  - Martius, Georg
-PY  - 2022
-DA  - 2022/02/01
-TI  - A soft thumb-sized vision-based sensor with accurate all-round force perception
-JO  - Nature Machine Intelligence
-SP  - 135
-EP  - 145
-VL  - 4
-IS  - 2
-SN  - 2522-5839
-UR  - https://doi.org/10.1038/s42256-021-00439-3
-DO  - 10.1038/s42256-021-00439-3
-ID  - Sun2022   
-```
+PY  - 2023
+DO  - https://doi.org/10.1002/aisy.202300042
+JO  - Advanced Intelligent Systems
+JA  - Adv. Intell. Syst.
+SP  - 2300042
+VL  - 5
+IS  - 8
+PB  - John Wiley & Sons, Ltd
+SN  - 2640-4567
+UR  - https://doi.org/10.1002/aisy.202300042
+Y2  - 2024/09/16
        
        
        
