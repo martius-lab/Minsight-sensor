@@ -66,7 +66,7 @@ Like Insight, Minsight uses a hybrid structure of a soft elastomer shell enclosi
 
 More detailed instructions for manufacturing and assembly are provided [here](Instructions/Manufacturing_Instructions.pdf)
 
-## Required equipment: 
+## Required equipment for manufacturing and assembly: 
 - Vaccum Chamber (5 Pa)
 - Scale with 0.1g accuracy
 - Screwdriver
