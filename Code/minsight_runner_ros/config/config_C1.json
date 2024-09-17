@@ -1,0 +1,16 @@
+{
+
+    "batch_size":1,
+    "gamma":1.0,
+    "total_epochs":100,
+    "model":"resnet",
+    "lr":0.001,
+    "print_freq":100,
+    "rescale":1,
+    "seed":42,
+    "force_map":1,
+    "sensor":"C1",
+    "working_dir": "calibration_files/",
+    "data_path":"calibration_files/"
+
+}

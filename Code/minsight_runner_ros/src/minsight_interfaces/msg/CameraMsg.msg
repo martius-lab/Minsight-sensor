@@ -1,0 +1,2 @@
+float64 timestamp
+sensor_msgs/Image input
