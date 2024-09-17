@@ -25,13 +25,11 @@ Insert video here
 
 # Mechanical Components
 
-Our hybrid structure of a soft elastomer shell enclosing a stiff metal skeleton ensures high sensitivity and robustness. The soft elastomer is for detecting light contact with high sensitivity. The metal skeleton is for holding the elastomer’s global shape and sustaining high-impact forces.
+Like Insight, Minsight uses a hybrid structure of a soft elastomer shell enclosing a stiff metal skeleton to ensure high sensitivity and robustness. The soft elastomer deforms easily and can detect contact with high sensitivity. The metal skeleton provides a stiff global shape and helps to sustain high-impact forces.
 
 <p align="center"><img src="Images/Mechanical_Structure.png" width="592.5" height="270.75">
 
- 
-
-## Elastomer Shell
+## Soft Elastomer Shell
 - 3D Printer: [Formlabs Form 3](https://formlabs.com/eu/3d-printers/form-3/)
 - 3D Printing Material: [Tough Resin FLTOTL05](https://formlabs.com/store/tough-2000-resin/). *Note: The material is updated.*
 - Mold Design: 
@@ -42,7 +40,7 @@ Our hybrid structure of a soft elastomer shell enclosing a stiff metal skeleton 
   - [Aluminum Flake 75 Micrometer](https://www.metallpulver24.de/de/aluminiumpulver-flaky-silber.html)
 - [Vacuum Chamber VP1100, 5 Pa](https://www.silikonfabrik.de/vakuumtechnik/komplettsysteme/vakuum-komplettsystem-vks27/vp1200-vakuumkammer-und-pumpe.html). *Note: The Pump is updated.*
        
-## Metal Skeleton
+## Rigid Metal Skeleton
 - 3D Printer: [ExOne X1 25 Pro](https://www.exone.com/en-US/Resources/News/X1-25PRO)
 - 3D Printing Material: [AlSi10Mg-0403 Alluminum Alloy](https://www.shapeways.com/materials/aluminum) *Note: The material is updated.*
 - Geometry Design: [Skeleton](CAD/skeleton.STEP)
@@ -54,8 +52,7 @@ Our hybrid structure of a soft elastomer shell enclosing a stiff metal skeleton 
 - Design: [Holder](CAD/camera_holder.STEP)
           [Base](CAD/sensor_base.STEP)
       
-## Imaging System
-
+# Imaging System
 
 ### Camera
 
@@ -66,24 +63,25 @@ Our hybrid structure of a soft elastomer shell enclosing a stiff metal skeleton 
 - PCB Design: [PCB/led_layout]
 - Example Supplier: [Beta Layout](https://de.beta-layout.com/leiterplatten/)
      
-
 ### Collimator
 - 3D Printer: [Formlabs Form 3](https://formlabs.com/eu/3d-printers/form-3/)
 - Material: [Standard Black](https://formlabs.com/de/shop/black-resin/)
 - Geometry Design: [Collimator](CAD/collimator.STEP)
 
+# Manufacturing and Assembly Instructions
+
+More detailed instructions for manufacturing and assembly are provided [here](Instructions/Manufacturing_Instructions.pdf)
+
 # Calibration
 We use a custom test bed to calibrate the sensor in a controlled way, collecting both normal and shear forces.
-For the technical details of this test bed, please refer to the Testbed section in the Insight Documentation [here](https://github.com/Huanbo-Sun/Haptics-for-Robots-Insight/blob/master/README.md#testbed)
-   <p align="center"><img src="Images/Testbed.png"> 
+For the technical details of this test bed, please refer to the [Testbed section](https://github.com/Huanbo-Sun/Haptics-for-Robots-Insight/blob/master/README.md#testbed) in the Insight Documentation 
 
 # Software
-Insight constantly records images from inside using a camera. Feeding these images and a reference image into a trained machine learning model makes it possible to estimate the force distribution all over a surface. Each pixel in the force prediction map has three values that indicate the force strength in three directions (x, y, and z). In a force visualization on the right, each point corresponding to each pixel in the force map shows the force distribution of the contact in both normal and shear directions.
 
-We provide ROS nodes to run Minsight [here](Code/) 
+We provide ROS nodes to run Minsight's force map inference and visualization [here](Code/) 
 
 
-# Citation
+#Citation
 Please use the following citation if you make use of our work:
 ## BibTex
 ``` citation
