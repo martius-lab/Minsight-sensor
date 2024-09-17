@@ -68,10 +68,10 @@ More detailed instructions for manufacturing and assembly are provided [here](In
 
 ## Required equipment for manufacturing and assembly: 
 - Vaccum Chamber (5 Pa)
-- Scale with 0.1g accuracy
+- Scale with 0.1 g accuracy
 - Screwdriver
-- 6 x M1.4x12 screws
-- 6 x M2x5 screws
+- 6 x M1.4x6 screws
+- 6 x M2.5x4 screws
 - 6 x M2 nut
 - Gloves, safetly goggles and mask
 - Mixing container and spatula
