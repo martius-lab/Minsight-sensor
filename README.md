@@ -33,7 +33,6 @@ Like Insight, Minsight uses a hybrid structure of a soft elastomer shell enclosi
   - [EcoFlex 00-30](https://www.smooth-on.com/products/ecoflex-00-30/)
   - [Aluminum Powder 65 Micrometer, 99% Pure](https://www.amazon.de/Aluminumpulver-Aluminium-Pulver-Alupulver-Zus%C3%A4tze/dp/B06WRTGP2Y)
   - [Aluminum Flake 75 Micrometer](https://www.metallpulver24.de/de/aluminiumpulver-flaky-silber.html)
-- [Example Vacuum Chamber: VP1100, 5 Pa](https://www.silikonfabrik.de/vakuumtechnik/komplettsysteme/vakuum-komplettsystem-vks27/vp1200-vakuumkammer-und-pumpe.html).
        
 ## Rigid Metal Skeleton
 - 3D Printer: [ExOne X1 25 Pro](https://www.exone.com/en-US/Resources/News/X1-25PRO)
@@ -66,6 +65,17 @@ Like Insight, Minsight uses a hybrid structure of a soft elastomer shell enclosi
 # Manufacturing and Assembly Instructions
 
 More detailed instructions for manufacturing and assembly are provided [here](Instructions/Manufacturing_Instructions.pdf)
+
+## Required equipment: 
+- Vaccum Chamber (5 Pa)
+- Scale with 0.1g accuracy
+- Screwdriver
+- 6 x M1.4x12 screws
+- 6 x M2x5 screws
+- 6 x M2 nut
+- Gloves, safetly goggles and mask
+- Mixing container and spatula
+
 
 # Calibration
 We use a custom test bed to calibrate the sensor in a controlled way, collecting both normal and shear forces.
