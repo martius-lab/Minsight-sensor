@@ -15,14 +15,14 @@ Intelligent interaction with the physical world requires perceptual abilities be
 
 Minsight is a vision-based tactile sensor. Is uses a camera as the transducer and can detect small deformations of an elastic shell from the inside. To create 3D forces, we use the photometric stereo effect to learn an end-to-end mapping of camera image to a force map over the full sensor surface. 
 
-<p align="center"><img src="Images/Working_Principle.png" width="592.5" height="270.75">
+<p align="center"><img src="Images/Working_Principle.png">
   
 
 # Mechanical Components
 
 Like Insight, Minsight uses a hybrid structure of a soft elastomer shell enclosing a stiff metal skeleton to ensure high sensitivity and robustness. The soft elastomer deforms easily and can detect contact with high sensitivity. The metal skeleton provides a stiff global shape and helps to sustain high-impact forces.
 
-<p align="center"><img src="Images/Mechanical_Structure.png" width="592.5" height="270.75">
+<p align="center"><img src="Images/Mechanical_Structure.png">
 
 ## Soft Elastomer Shell
 - 3D Printer: [Formlabs Form 3](https://formlabs.com/eu/3d-printers/form-3/)
