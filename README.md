@@ -20,7 +20,7 @@ Minsight is a vision-based tactile sensor. Is uses a camera as the transducer an
 
 # Mechanical Components
 
-Like Insight, Minsight uses a hybrid structure of a soft elastomer shell enclosing a stiff metal skeleton to ensure high sensitivity and robustness. The soft elastomer deforms easily and can detect contact with high sensitivity. The metal skeleton provides a stiff global shape and helps to sustain high-impact forces.
+Like [Insight](https://github.com/Huanbo-Sun/Haptics-for-Robots-Insight/blob/master/README.md), Minsight uses a hybrid structure of a soft elastomer shell enclosing a stiff metal skeleton to ensure high sensitivity and robustness. The soft elastomer deforms easily and can detect contact with high sensitivity. The metal skeleton provides a stiff global shape and helps to sustain high-impact forces.
 
 <p align="center"><img src="Images/Mechanical_Structure.png">
 
@@ -84,12 +84,16 @@ For the technical details of this test bed, please refer to the [Testbed section
 
 # Software
 
-Data processing for the raw data collected durcing calibration can be found in a [jupyter notebbok](Code/minsight_training/data_processing/dataset_preprocessing.ipynb). \
-We furthermore provide code for training the force mapping on the preprocessed data [here](Code/minsight_training/training/) \
-To reproduce error plots and inference times, refer to the respective scripts in the [Code section](Code/minsight_training/)
-To reproduce results for the lump classification experiment, use [this code](Code/lump_classification/), together with the data published in https://doi.org/10.17617/3.AEDHD1
+Data processing for the raw data collected during calibration can be found in a [jupyter notebook](Code/minsight_training/data_processing/dataset_preprocessing.ipynb). \
+We furthermore provide code for training the force mapping on the preprocessed data [here](Code/minsight_training/training/). \
 
-We also provide ROS nodes to run Minsight's force map inference and visualization [here](Code/). The provided config files are valid for a demo sensor and would need to be replaced with the respective calibration files for the sensor at hand. 
+We also provide ROS nodes to run Minsight's force map inference and visualization [here](Code/). The provided config files are examples, valid only for an exisiting demo sensor and should to be replaced with the respective calibration files for any new sensor. 
+
+## Reproducing results in the Minsight paper
+
+To reproduce error plots and inference times, refer to the respective scripts in the [Code section](Code/minsight_training/).\
+To reproduce results for the lump classification experiment, use [this code](Code/lump_classification/), together with the data published in https://doi.org/10.17617/3.AEDHD1.
+
 
 # Citation
 Please use the following citation if you make use of our work:
