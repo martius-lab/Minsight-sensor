@@ -54,7 +54,7 @@ Like Insight, Minsight uses a hybrid structure of a soft elastomer shell enclosi
 
 ### LED Ring
 - LEDS: [Würth Elektronik SMD LEDs 150044M155220](https://www.mouser.de/ProductDetail/Wurth-Elektronik/150044M155220?qs=rQFj71Wb1eUvmcUtzGYYDA%3D%3D)
-- PCB Design: [PCB/led_layout]
+- PCB Design: [PCB/led_layout] (TBD, will be released soon)
 - Example Supplier: [Beta Layout](https://de.beta-layout.com/leiterplatten/)
      
 ### Collimator
