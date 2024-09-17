@@ -19,8 +19,8 @@ Intelligent interaction with the physical world requires perceptual abilities be
 # Working Mechanism
 
 Minsight is a vision-based tactile sensor. Is uses a camera as the transducer and can detect small deformations of an elastic shell from the inside. To create 3D forces, we use the photometric stereo effect to learn an end-to-end mapping of camera image to a force map over the full sensor surface. 
-  
-Insert video here
+
+<p align="center"><img src="Images/Working_Principle.png" width="592.5" height="270.75">
   
 
 # Mechanical Components
@@ -81,7 +81,7 @@ For the technical details of this test bed, please refer to the [Testbed section
 We provide ROS nodes to run Minsight's force map inference and visualization [here](Code/) 
 
 
-#Citation
+# Citation
 Please use the following citation if you make use of our work:
 ## BibTex
 ``` citation
