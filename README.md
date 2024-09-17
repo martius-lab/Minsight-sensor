@@ -70,6 +70,7 @@ More detailed instructions for manufacturing and assembly are provided [here](In
 - Vaccum Chamber (5 Pa)
 - Scale with 0.1 g accuracy
 - Screwdriver
+- Mold release / Inhibit-X
 - 6 x M1.4x6 screws
 - 6 x M2.5x4 screws
 - 6 x M2 nut
