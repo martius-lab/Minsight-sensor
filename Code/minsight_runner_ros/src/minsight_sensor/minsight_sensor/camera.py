@@ -1,20 +1,15 @@
-from re import X
-import matplotlib
 import matplotlib.pyplot as plt
 import time
 
-import torch
-import os
 import time
 import cv2
 
 #### Ros dependencies ####
 import rclpy
 from rclpy.node import Node
-from minsight_interfaces.msg import Minsight, CameraMsg
+from minsight_interfaces.msg import CameraMsg
 
-# Import own topic data format here!
-from cv_bridge import CvBridge, CvBridgeError
+from cv_bridge import CvBridge
 
 
 class Camera(Node):
