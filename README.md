@@ -76,7 +76,7 @@ For the technical details of this test bed, please refer to the [Testbed section
 
 # Software
 
-We provide ROS nodes to run Minsight's force map inference and visualization [here](Code/) 
+We provide ROS nodes to run Minsight's force map inference and visualization [here](Code/). The provided config files are valid for a demo sensor and would need to be replaced with the respective calibration files for the sensor at hand. 
 
 
 # Citation
