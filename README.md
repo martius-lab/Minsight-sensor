@@ -1,9 +1,6 @@
 # Minsight: A Fingertip-Sized Vision-Based Tactile Sensor for Robotic Manipulation
-<p align="right">
-  *This is the only official content release regarding the design of Minsight.*
-</p>
 
-This project shows the principle design of [Minsight](https://onlinelibrary.wiley.com/doi/full/10.1002/aisy.202300042). It is a soft fingertip-sized tactile sensor that can sense 3D forces over its whole sensing surface.
+This project provides manufacturing details and files for [Minsight](https://onlinelibrary.wiley.com/doi/full/10.1002/aisy.202300042). It is a soft fingertip-sized tactile sensor that can sense 3D forces over its whole sensing surface.
 
 The corresponding paper is titled "[Minsight: A Fingertip-Sized Vision-Based Tactile Sensor for Robotic Manipulation](https://onlinelibrary.wiley.com/doi/full/10.1002/aisy.202300042)", published in *Advanced Intelligent Systems*, 2023. 
 
