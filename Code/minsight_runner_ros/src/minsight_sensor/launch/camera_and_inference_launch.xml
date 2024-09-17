@@ -1,0 +1,12 @@
+<launch>
+  <node pkg="minsight_sensor" exec="image_publisher" name="camera">
+     <param name="camera_port" value="2" />
+     <remap from="/image_data" to="/image_data"/>
+  </node>
+  <node pkg="minsight_sensor" exec="sensor_inference" name="sensor">
+  <param name="camera_port" value="2" />
+  <param name="config_path" value="/is/sg2/iandrussow/trifinger_robot/tactile_sensing/minsight_runner/config/config_C1.json" />
+  </node>
+</launch>
+
+

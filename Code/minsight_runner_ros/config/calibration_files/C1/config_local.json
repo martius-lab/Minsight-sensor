@@ -1,0 +1,17 @@
+{
+
+    "batch_size":4,
+    "gamma":1.0,
+    "total_epochs":100,
+    "model":"resnet",
+    "model_dir": "../config/C1/",
+    "data_path": "../config/C1/",
+    "lr":0.001,
+    "print_freq":100,
+    "rescale":1,
+    "seed":42,
+    "force_map":1,
+    "input_scale":100,
+    "transform": "transform_none"
+
+}

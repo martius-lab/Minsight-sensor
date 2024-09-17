@@ -1,0 +1,6 @@
+<launch>
+  <node pkg="minsight_sensor" exec="image_publisher" name="camera">
+     <param name="camera_port" value="2" />
+  </node>
+</launch>
+

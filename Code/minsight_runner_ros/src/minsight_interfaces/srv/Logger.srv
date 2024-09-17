@@ -1,0 +1,4 @@
+bool recording
+std_msgs/String path
+---
+bool res
