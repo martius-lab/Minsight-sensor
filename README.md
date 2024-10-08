@@ -54,7 +54,7 @@ Like [Insight](https://github.com/Huanbo-Sun/Haptics-for-Robots-Insight/blob/mas
 
 ### LED Ring
 - LEDS: [Würth Elektronik SMD LEDs 150044M155220](https://www.mouser.de/ProductDetail/Wurth-Elektronik/150044M155220?qs=rQFj71Wb1eUvmcUtzGYYDA%3D%3D)
-- PCB Design: [PCB/led_layout] (TBD, will be released soon)
+- PCB Design: [PCB/led_layout]
 - Example Supplier: [Beta Layout](https://de.beta-layout.com/leiterplatten/)
      
 ### Collimator
